@@ -32,10 +32,10 @@ def guess_game(list_of_words, guess):
 class Game:
     def __init__(self, words = []):
         self.words = words
-        self.guess = None
+        self.guess = 0
 
-    def add(self, word=None):
-        if word == None:
+    def add(self, word=0):
+        if word == 0:
             word = input("What word would you like to add?\n>")
             self.words.append(word.lower())
         else:
@@ -47,12 +47,17 @@ class Game:
     def guess(self,word):
         if word in self.words:
             print("You Guessed it")
+        else:
+            print("You failed")
 
 
-    def remove(self,index=None):
+    def remove(self,index=0):
         if index:
             print(self.words)
             index = input("write the index of the word you want removed\n>")
             self.words.pop(index)
         else:
             self.words.pop(index)
+
+
+game = Game()
