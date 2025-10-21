@@ -52,4 +52,7 @@ class Game:
     def remove(self,index=None):
         if index:
             print(self.words)
-            x = input("write the index of the word you want removed\n>")
+            index = input("write the index of the word you want removed\n>")
+            self.words.pop(index)
+        else:
+            self.words.pop(index)
