@@ -34,11 +34,11 @@ class Game:
         self.words = words
         self.guess = 0
 
-    def add(self, word=0):
-        if word == 0:
-            word = input("What word would you like to add?\n>")
+    def add(self, word=""):
+        if word:
             self.words.append(word.lower())
         else:
+            word = input("What word would you like to add?\n>")
             self.words.append(word.lower())
 
     def display(self):
