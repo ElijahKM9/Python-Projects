@@ -51,13 +51,16 @@ class Game:
             print("You failed")
 
 
-    def remove(self,index=0):
-        if index:
+    def remove(self,index=-1):
+        if index == -1:
             print(self.words)
-            index = input("write the index of the word you want removed\n>")
+            index = int(input("write the index of the word you want removed\n>"))
             self.words.pop(index)
         else:
             self.words.pop(index)
 
 
 game = Game()
+game.add("rib")
+game.display()
+game.remove()
