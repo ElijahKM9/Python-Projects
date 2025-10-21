@@ -50,3 +50,6 @@ class Game:
 
 
     def remove(self,index=None):
+        if index:
+            print(self.words)
+            x = input("write the index of the word you want removed\n>")
